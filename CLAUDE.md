@@ -10,7 +10,10 @@ a script).
   records; the Worker custom domain only owns the apex A/AAAA.
 - `www.sort.land` is a separate, older DNS record (currently a dead origin),
   not handled here.
-- Style is shared with gunnaringe.sort.land (`../gunnaringe.github.io`): same
-  colour variables and the `gi.woff2` handwriting font. Keep them in step.
+- Paper-and-ink style (system light/dark), the original look of
+  gunnaringe.sort.land, which has since gone hacker-only. The `gi.woff2`
+  handwriting font is for names only; names stay on one line (`cqi` sizing in
+  `.name`). The portrait (`assets/portrait.svg`, copied from
+  `../gunnaringe.github.io`) stays dark line art as drawn.
 - Asset URLs are unversioned, so `_headers` caches `/assets/*` for a day only.
 - Preview: `python3 -m http.server -d site 8000`. CI runs html-validate and lychee.
