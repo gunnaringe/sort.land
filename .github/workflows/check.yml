@@ -27,5 +27,6 @@ jobs:
           args: >-
             --no-progress
             --root-dir "${{ github.workspace }}/site"
+            --exclude "^https://sort\\.land"
             "site/**/*.html"
           fail: true
