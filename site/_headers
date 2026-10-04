@@ -1,0 +1,14 @@
+# Cloudflare Workers static assets response headers.
+# https://developers.cloudflare.com/workers/static-assets/headers/
+
+/*
+  Content-Security-Policy: default-src 'none'; style-src 'self'; img-src 'self'; font-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+  Strict-Transport-Security: max-age=63072000
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), browsing-topics=()
+  X-Content-Type-Options: nosniff
+  Cross-Origin-Opener-Policy: same-origin
+
+# No build step, so asset URLs are not versioned: cache for a day only.
+/assets/*
+  Cache-Control: public, max-age=86400

@@ -1,0 +1,16 @@
+// Cloudflare Workers (static assets only, no Worker script).
+// Importing this repository in Workers & Pages picks this file up:
+// `npx wrangler deploy` uploads site/ and attaches sort.land as a custom
+// domain (creating its DNS record and certificate). MX/TXT records for mail
+// are left alone.
+{
+  "name": "sort-land",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./site",
+    "not_found_handling": "404-page"
+  },
+  "routes": [
+    { "pattern": "sort.land", "custom_domain": true }
+  ]
+}
